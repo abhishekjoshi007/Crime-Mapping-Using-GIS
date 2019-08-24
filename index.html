@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="crime library">
+	  <meta name="keywords" content="web design, crime mapping, local crime website">
+  	<meta name="author" content="Abhishek Joshi">
+    <title>Crime Library | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">CRIME</span> LIBRARY</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li class="current"><a href="about.html">About</a></li>
+            <button type="button" class="btn btn-link " style="background:#35424a;margin-top:-7px;color:#cccccc;font-weight:bold;" data-toggle="modal" data-target="#myModalC">CREATE AN ALERT
+           </button>
+            <li ><a href="map_main.html">Explore the map</a></li>
+            <li><a href="#">Register a camera</a></li>
+            <button type="button" class="btn btn-link " style="background:#35424a;margin-top:-7px;color:#cccccc;font-weight:bold;" data-toggle="modal" data-target="#myModal">SIGN IN
+           </button>
+         </ul>
+        </nav>
+      </div>
+      </header>
+
+<!-- The Modal Sign IN-->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">SIGN IN</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+      
+          <form action="registration-form.php" method="post">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control"  name="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control"  name="password">
+  </div>
+  <div class="form-group form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+</form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- The Modal create an alert -->
+  <div class="modal fade" id="myModalC">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">CREATE AN ALERT</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+      
+          <form action="" method="post">
+  <div class="form-group">
+    <label for="Name This Alert">Name This Alert:</label>
+    <input type="text" class="form-control-range"  name="nta">
+  </div>
+    <div class="form-group">
+    <label for="location">Location:</label>
+    <input type="text" class="form-control-range"  name="location">
+  </div>
+
+  <div class="form-group">
+    <form id="fromCustomSelect" name="fromCustomSelect" action="" method="post">
+			<div>
+				<div class="custom-select" id="custom-select">Incident Type:</div>
+				<div id="custom-select-option-box">
+					<div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="Assualt"> Assualt
+					</div>
+					<div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="Kidnapping"> Kidnapping
+					</div>
+					<div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="robbery">Robbery 
+					</div>
+					<div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="homicide">Homicide 
+					</div>
+                    <div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="vehicle theft">Vehicle Theft 
+					</div>
+                    <div class="custom-select-option">
+						<input onChange="toggleFillColor(this);"
+							class="custom-select-option-checkbox" type="checkbox"
+							name="toys[]" value="missing person">Missing Person 
+					</div>
+            </div>
+			</div>
+			<button type="submit" class="search btn" >Submit</button>
+		</form>
+  </div>
+  <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+</form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+    
+   <section id="showcase" >
+      
+       <div class="site_title">
+        <div class="btn" >
+      <button type="button"><a href="map_main.html" style="text-decoration:none;color:#FFF;"> EXPLORE THE MAP </a></button>
+      </div></br>
+        <h1>WELCOME TO CRIME LIBRARY</h1>
+        <p>START YOUR SEARCH HERE</p>
+        </div>
+      
+      <div class="overlay"></div>
+      
+     </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Subscribe To Our Newsletter</h1>
+        <form>
+          <div class="input-group mb-2">
+  <input type="text" class="form-control" style="width:20pc" placeholder="Enter Email..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+  &nbsp;
+  <div class="input-group-append">
+    <button class="btn" style="background-color:#e8491d;color:#FFF"  type="button">Submit</button>
+  </div>
+</div>
+        </form>
+      </div>
+      
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          
+         <h2>Where Does the Data Come From?</h2>
+                <p>We extract data from the existing records system at each participating law enforcement agency through an automated import process. The data we display will always be the most current available.</p>
+                <p>&nbsp;</p>
+                <p><br>
+                  <br>
+                  <img  src="https://ocpd-content.azureedge.net/cdn/images/where-data-comes-from.png" width="421" height="242" alt=""></p>
+        </div>
+            
+        
+               <div class="box">
+                <h2 >How Can I Get My Agency Online?</h2>
+                <p>Sharing crime data with the community is a choice each department makes. If you believe your agency should join this nationwide effort please contact the public information officer at your local law enforcement agency to let them know about CrimeMapping.com. Hearing from a member of the community that they serve will have a greater impact than hearing from us.</p>
+                <br><br>
+                <img  src="https://ocpd-content.azureedge.net/cdn/images/how-to-get-agency-online.png" width="445" height="170" alt="">
+            </div>
+                        
+        
+        <div class="box">
+                <h2>Create Personalized Alerts</h2>
+                <p>You can create multiple alerts that track crime and/or sex offender movement in any area of interest. Simply define an area of interest, verify that the local law enforcement agency for that area is providing data to CrimeMapping.com and choose which types of crimes and/or sex offenders you are interested in. You will receive an email when new activity occurs.</p>
+                <br><br>
+                <img src="https://ocpd-content.azureedge.net/cdn/images/personalized-alerts.png" width="294" height="290" alt="">
+            </div>
+            
+        
+            
+      </div>
+    </section>
+
+    <footer>
+      <p>Crime Library, Copyright &copy; 2019</p>
+    </footer>
+    
+    <!-- script of create an alert-->
+    <script>
+	$("#custom-select").on("click",function(){
+		$("#custom-select-option-box").toggle();
+	});
+	function toggleFillColor(obj) {
+		$("#custom-select-option-box").show();
+		if($(obj).prop('checked') == true) {
+			$(obj).parent().css("background",'#c6e7ed');
+		} else {
+			$(obj).parent().css("background",'#FFF');
+		}
+	}
+	$(".custom-select-option").on("click", function() {
+		var checkboxObj = $(this).children("input");
+		$(checkboxObj).prop("checked",true);
+		toggleFillColor(checkboxObj);
+	});
+		
+	$("body").on("click",function(e){
+		if(e.target.id != "custom-select" && $(e.target).attr("class") != "custom-select-option") {
+			$("#custom-select-option-box").hide();
+		}
+	});
+	</script>
+  </body>
+</html>
